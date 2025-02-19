@@ -1,0 +1,29 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 8px;
+}
+thead {
+    color: rgb(0, 0, 0);
+}
+th {
+    color: #000;
+    font-weight: 500;
+}
+th, td {
+    text-align: left;
+    padding: 10px 15px;
+    font-size: 15px;
+    border: 1px solid rgb(221, 221, 221) !important;
+}
+td {
+    border-bottom: 1px solid #ddd !important;
+    color: #000;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}

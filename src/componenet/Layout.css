@@ -1,0 +1,31 @@
+.logo{
+    width: 100%;
+}
+.logo h1{
+    font-size: 30px;
+    color: #fff;
+    font-weight: 600;
+}
+.navbar-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.navbar-list li{
+    margin-right: 20px;
+    line-height: 35px;
+}
+.navbar-list a{
+    text-decoration: none;
+    color: #ffff;
+    font-size: 16px;
+}
+.menu-bar{
+   padding: 10px 0;
+}
+
+.left{
+    width: 100%;
+    display: flex;
+}

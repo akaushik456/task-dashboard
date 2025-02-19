@@ -1,0 +1,77 @@
+/* Reset Box Model */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Remove Default List Styles */
+ul, ol {
+  list-style: none;
+}
+
+/* Reset Anchor Styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body{
+    font-family: 'poppins', sans-serif;
+}
+/* Remove Button Default Styles */
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+/* Normalize Input Fields */
+input, textarea, select, button {
+  font: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+/* Set Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove Default Focus Outline */
+:focus {
+  outline: none;
+}
+
+/* Remove Default Image Border */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Reset Heading Font Weights */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+.first{
+    width: 30%;
+}
+.second{
+    width: 100%;
+}
+header{
+    width: 15%;
+    height: 100vh;
+    background: #2A2E51;
+    padding: 30px 20px;
+}
+.container{
+    width: 85%;
+    padding: 50px 40px;
+    margin: 0 auto;
+    background: #18202D;
+    color: #fff;
+}
