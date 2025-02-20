@@ -6,6 +6,7 @@ import './package.css'
 const Package = () => {
     return(
         <React.Fragment>
+            <div className="right-mam">
         <div className="container">
                     <div className="container-row">
                         <div className="first-container">
@@ -29,6 +30,7 @@ const Package = () => {
             </section>    
 
         </div>            
+        </div>
         </React.Fragment>
     )
 }

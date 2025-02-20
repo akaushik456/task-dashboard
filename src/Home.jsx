@@ -7,6 +7,7 @@ import Twodiv from './componenet/Twodiv';
 const Home = () => {
      return(
         <>
+        <div className='right-mam'>
         <div className="container">
             <div className="container-row">
                 <div className="first-container">
@@ -26,12 +27,15 @@ const Home = () => {
             </div>
 
             <section>
+            
                <Fourdiv />   
+
             </section> 
 
             <section style={{marginTop:'30px'}}>
                 <Twodiv />
             </section>
+        </div>
         </div>
         </>
      )

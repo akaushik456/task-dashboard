@@ -21,6 +21,7 @@ function acessTable () {
  
     return (
        <>
+         <div className="right-mam">
           <div className="container">
               <div className="container-row">
                   <div className="first-container">
@@ -64,7 +65,7 @@ function acessTable () {
             </tbody>
           </table>
         </div>
-        
+        </div>
       </>
     )
 }
