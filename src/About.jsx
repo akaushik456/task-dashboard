@@ -1,5 +1,5 @@
 import React from 'react'
-import './about.css'
+import './About.css'
 import { FaSearch, FaUser, FaCog, FaBell } from 'react-icons/fa'
 
 function exportData (
