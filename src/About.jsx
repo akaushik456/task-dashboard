@@ -59,7 +59,6 @@ function acessTable () {
                 <td>{row.subject}</td>
               </tr>
             
-              
               ))}
   
             </tbody>

@@ -14,7 +14,7 @@
 }
 .navbar-list li{
     margin-right: 20px;
-    line-height: 35px;
+    line-height: 25px;
 }
 .navbar-list a{
     text-decoration: none;
@@ -23,7 +23,6 @@
 
 }
 .navbar-list li{
-    background-image: linear-gradient(to right, #18202d, #a2a2a2);
     background-repeat: no-repeat;
     background-size: 0% 100%;
     border-radius: 8px;
@@ -31,11 +30,24 @@
     background-position-x: right;
     transition: background 500ms;
     padding: 0 20px;
+    position: relative;
 }
-.navbar-list li:hover{
-    background-size: 100% 100%;
-    background-position-x: left;
+.navbar-list li a:after{
+    background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
 }
+.navbar-list li a:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
 .menu-bar{
    padding: 10px 0;
 }

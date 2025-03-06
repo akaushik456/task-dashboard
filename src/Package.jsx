@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { use, useEffect, useState } from 'react'
 import { FaSearch,FaUser,FaCog,FaBell, } from 'react-icons/fa'
 import Table from './componenet/Table'
 import './package.css'
 
 const Package = () => {
+
+
+
     return(
         <React.Fragment>
-            <div className="right-mam">
+             <div className="right-mam">
         <div className="container">
                     <div className="container-row">
                         <div className="first-container">
@@ -30,7 +33,7 @@ const Package = () => {
             </section>    
 
         </div>            
-        </div>
+        </div> 
         </React.Fragment>
     )
 }
