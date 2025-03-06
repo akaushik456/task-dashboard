@@ -1,7 +1,7 @@
 import React, { use, useEffect, useState } from 'react'
 import { FaSearch,FaUser,FaCog,FaBell, } from 'react-icons/fa'
 import Table from './componenet/Table'
-import './package.css'
+import './Package.css'
 
 const Package = () => {
 

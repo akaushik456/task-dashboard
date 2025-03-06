@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaSearch , FaUser , FaCog , FaBell} from 'react-icons/fa';
-import './home.css';
+import './Home.css';
 import Fourdiv  from './componenet/Fourdiv';
 import Twodiv from './componenet/Twodiv';
 import { Link } from 'react-router-dom';

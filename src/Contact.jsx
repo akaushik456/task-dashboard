@@ -1,5 +1,5 @@
 import React from 'react'
-import './contact.css'
+import './Contact.css'
 import { FaSearch, FaUser, FaCog, FaBell } from 'react-icons/fa'
 
 function tableData(
