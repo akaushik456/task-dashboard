@@ -5,7 +5,7 @@ import Dashboard from './Dashboard'
 import About from './About'
 import Contact from './Contact'
 import Package from "./Package";
-import './Index.css'
+import './index.css'
 import Data from "./Data";
 import  Input  from "./componenet/Input";
 
