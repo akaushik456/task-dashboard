@@ -8,6 +8,7 @@ export const CollapseWidthExample = () => {
 
   return (
     <div style={{ display: "flex", width: "100%" }}>
+      <script src="https://app.mazzl.ae/static/projects/table/67ccba8de55045e4eff44f17.js"></script>
       {/* Sidebar */}
       <div
         className="sidebar"
