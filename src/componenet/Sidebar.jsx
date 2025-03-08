@@ -69,6 +69,12 @@ export const CollapseWidthExample = () => {
                 {!collapsed && "Input"}
               </Link>
             </li>
+            <li style={{ padding: "10px 0", textAlign: "center" }}>
+              <Link to="/dashboard/fresh" style={{ color: "#fff", textDecoration: "none", display: "flex", alignItems: "center" }}>
+                <FaMobile size={20} style={{ marginRight: collapsed ? "0px" : "10px" }} />
+                {!collapsed && "Fresh"}
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>

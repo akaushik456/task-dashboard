@@ -6,6 +6,7 @@ import About from "./About";
 import Contact from "./Contact";
 import Package from "./Package";
 import Data from "./Data";
+import Fresh from "./Fresh"
 import Input from "./componenet/Input";
 import "./index.css";
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="data" element={<Data />} />
           <Route path="input" element={<Input />} />
+          <Route path="fresh" element={<Fresh />} />
         </Route>
       </Routes>
     </BrowserRouter>

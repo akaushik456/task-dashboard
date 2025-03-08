@@ -1,14 +1,22 @@
 import React, { useEffect, useState } from 'react';
-import { FaSearch, FaUser, FaCog, FaBell, FaEdit, FaTrash, FaCheck } from 'react-icons/fa';
+import { FaSearch, FaUser, FaCog, FaBell, FaEdit, FaTrash, FaCheck, FaLongArrowAltRight, FaLongArrowAltLeft } from 'react-icons/fa';
 import './index.css';
+import { ul } from 'framer-motion/client';
 
 const Data = () => {
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(false);
     const [editId, setEditId] = useState(null);
     const [editedData, setEditedData] = useState({});
+    const [currentPage , setCurrent] = useState(1);
+    const recordPerPage = 8;
+    const lastIndex = currentPage * recordPerPage;
+    const firstIndex = lastIndex - recordPerPage;
+    const records = users.slice(firstIndex , lastIndex);
+    const npage = Math.ceil(users.length / recordPerPage);
+    const numbers = Array.from({length: npage}, (_, i) => i + 1);
 
-  
+   
         fetch("https://fakestoreapi.com/products")
             .then(res => res.json())
             .then(data => setUsers(data))
@@ -36,6 +44,23 @@ const Data = () => {
         setEditId(null);
     };
 
+    const perPage = () => {
+        if(currentPage > 1) {
+            setCurrent(currentPage - 1)
+        }
+    }
+    
+    const changeCpage = (n) => {
+        setCurrent(n)
+    }
+    
+    const nextPage = () => {
+        if(currentPage < npage) {
+            setCurrent(currentPage + 1)
+        }
+    
+    }
+
     return (
         <div className='right-mam'>
             <div className="container">
@@ -58,7 +83,7 @@ const Data = () => {
                 {loading ? (
                     <div style={{ fontSize: '30px', color: '#fff' }}>Loading...</div>
                 ) : (
-                    <div className='scroll'>
+                    <div>
                         <table>
                             <thead>
                                 <tr>
@@ -73,7 +98,7 @@ const Data = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {users.map((user) => (
+                                {records.map((user) => (
                                     <tr key={user.id}>
                                         <td>{user.id}</td>
                                         <td>
@@ -112,11 +137,33 @@ const Data = () => {
                                 ))}
                             </tbody>
                         </table>
+                        <nav>
+                            <ul style={styles.ul}>
+                                <li style={styles.li}>
+                                    <a href="#" onClick={perPage}><FaLongArrowAltLeft /></a>
+                                </li>
+                                {
+                                    numbers.map((n, i) => (
+                                        <li style={styles.li} className={`page-item ${currentPage === n ? 'active' : ''}`} key={i}>
+                                            <a href="#" onClick={() => changeCpage(n)} style={{color:'red'}}>{n}</a>
+                                        </li>
+                                    ))
+                                }
+                                  <li style={styles.li}>
+                                    <a href="#" onClick={nextPage}><FaLongArrowAltRight /></a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 )}
             </div>
         </div>
     );
 };
+
+const styles ={ 
+    ul: {display:'flex' , justifyContent:'end'},
+    li: {marginRight:'20px'}
+}
 
 export default Data;
