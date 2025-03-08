@@ -13,7 +13,7 @@ export const CollapseWidthExample = () => {
         className="sidebar"
         style={{
           background: "#2b3443",
-          width: collapsed ? "80px" : "350px", // Adjust width when collapsed
+          width: collapsed ? "80px" : "350px",
           color: "#fff",
           height: "100vh",
           overflowX: "hidden",
@@ -24,9 +24,6 @@ export const CollapseWidthExample = () => {
           alignItems: collapsed ? "center" : "flex-start",
         }}
       >
-        {/* Toggle Button */}
-
-
         {!collapsed && (
           <div className="logo">
             <h1 style={{ textAlign: "center" }}>Aman Kaushik</h1>
@@ -37,37 +34,37 @@ export const CollapseWidthExample = () => {
         <nav>
           <ul className="navbar-list" style={{ listStyle: "none", padding: "0", width: "100%" }}>
             <li style={{ padding: "10px 0", textAlign: "center" }}>
-              <Link to="/Dashboard" style={{ color: "#fff", textDecoration: "none", display: "flex", alignItems: "center" }}>
+              <Link to="/dashboard" style={{ color: "#fff", textDecoration: "none", display: "flex", alignItems: "center" }}>
                 <FaHome size={20} style={{ marginRight: collapsed ? "0px" : "10px" }} />
                 {!collapsed && "Dashboard"}
               </Link>
             </li>
             <li style={{ padding: "10px 0", textAlign: "center" }}>
-              <Link to="/package" style={{ color: "#fff", textDecoration: "none", display: "flex", alignItems: "center" }}>
+              <Link to="/dashboard/package" style={{ color: "#fff", textDecoration: "none", display: "flex", alignItems: "center" }}>
                 <FaWolfPackBattalion size={20} style={{ marginRight: collapsed ? "0px" : "10px" }} />
                 {!collapsed && "Package"}
               </Link>
             </li>
             <li style={{ padding: "10px 0", textAlign: "center" }}>
-              <Link to="/about" style={{ color: "#fff", textDecoration: "none", display: "flex", alignItems: "center" }}>
+              <Link to="/dashboard/about" style={{ color: "#fff", textDecoration: "none", display: "flex", alignItems: "center" }}>
                 <FaInfoCircle size={20} style={{ marginRight: collapsed ? "0px" : "10px" }} />
                 {!collapsed && "About"}
               </Link>
             </li>
             <li style={{ padding: "10px 0", textAlign: "center" }}>
-              <Link to="/contact" style={{ color: "#fff", textDecoration: "none", display: "flex", alignItems: "center" }}>
+              <Link to="/dashboard/contact" style={{ color: "#fff", textDecoration: "none", display: "flex", alignItems: "center" }}>
                 <FaMobile size={20} style={{ marginRight: collapsed ? "0px" : "10px" }} />
                 {!collapsed && "Contact"}
               </Link>
             </li>
             <li style={{ padding: "10px 0", textAlign: "center" }}>
-              <Link to="/data" style={{ color: "#fff", textDecoration: "none", display: "flex", alignItems: "center" }}>
+              <Link to="/dashboard/data" style={{ color: "#fff", textDecoration: "none", display: "flex", alignItems: "center" }}>
                 <FaMobile size={20} style={{ marginRight: collapsed ? "0px" : "10px" }} />
                 {!collapsed && "Data"}
               </Link>
             </li>
             <li style={{ padding: "10px 0", textAlign: "center" }}>
-              <Link to="/input" style={{ color: "#fff", textDecoration: "none", display: "flex", alignItems: "center" }}>
+              <Link to="/dashboard/input" style={{ color: "#fff", textDecoration: "none", display: "flex", alignItems: "center" }}>
                 <FaMobile size={20} style={{ marginRight: collapsed ? "0px" : "10px" }} />
                 {!collapsed && "Input"}
               </Link>
@@ -75,28 +72,28 @@ export const CollapseWidthExample = () => {
           </ul>
         </nav>
       </div>
+
+      {/* Toggle Button */}
       <button
-          onClick={() => setCollapsed(!collapsed)}
-          style={{
-            backgroundColor: "rgb(0, 123, 255)",
-            color: "#fff",
-            border: "none",
-            padding: "10px 10px",
-            borderRadius: "5px",
-            position:'absolute',
-            bottom:'0',
-            display:'flex',
-            left:'20px',
-            cursor: "pointer",
-            marginBottom: "10px",
-            alignSelf: collapsed ? "center" : "flex-end",
-          }}
-        >
-          {collapsed ? <FaLongArrowAltRight size={20} /> : <FaLongArrowAltLeft size={20} />}
-        </button>
+        onClick={() => setCollapsed(!collapsed)}
+        style={{
+          backgroundColor: "rgb(0, 123, 255)",
+          color: "#fff",
+          border: "none",
+          padding: "10px 10px",
+          borderRadius: "5px",
+          position: "absolute",
+          bottom: "0",
+          left: "20px",
+          cursor: "pointer",
+          marginBottom: "10px",
+        }}
+      >
+        {collapsed ? <FaLongArrowAltRight size={20} /> : <FaLongArrowAltLeft size={20} />}
+      </button>
+
       {/* Content Section */}
-      <div style={{ flex: 1, transition: "margin-left 0.3s ease-in-out",  }}>
-        
+      <div style={{ flex: 1, transition: "margin-left 0.3s ease-in-out" }}>
         <Outlet />
       </div>
     </div>

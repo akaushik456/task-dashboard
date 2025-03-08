@@ -8,13 +8,14 @@ const Data = () => {
     const [editId, setEditId] = useState(null);
     const [editedData, setEditedData] = useState({});
 
-    useEffect(() => {
-        setLoading(true);
+  
         fetch("https://fakestoreapi.com/products")
             .then(res => res.json())
             .then(data => setUsers(data))
             .catch(error => console.log(error))
             .finally(() => setLoading(false));
+            useEffect(() => {
+                setLoading(true);
     }, []);
 
     const handleDelete = (id) => {
